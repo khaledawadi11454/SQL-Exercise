@@ -1,4 +1,5 @@
 --Basic Queries
+"
 1- SELECT name FROM students;
 
 2-SELECT ID,name,Age,Gender,Points FROM students WHERE Age>30;
@@ -21,3 +22,37 @@ WHERE name = 'Basma' AND 'she solved one exercice';
 8-UPDATE students
 SET Points= '150'
 WHERE name = 'Alex' AND 'he is late today';
+"
+--Creating table graduate 
+
+"
+CREATE TABLE "graduates" (
+	"ID"	INTEGER NOT NULL,
+	"Name"	TEXT NOT NULL UNIQUE,
+	"Age"	INTEGER NOT NULL,
+	"Gender"	TEXT,
+	"Points"	INTEGER,
+	"Graduation"	TEXT,
+	PRIMARY KEY("ID" AUTOINCREMENT),
+	UNIQUE("Age")
+);
+"
+
+
+"
+INSERT INTO graduates (Name,Age,Points)
+SELECT name, Age, Points FROM students
+WHERE name='layal';
+"
+"
+INSERT INTO graduates (Graduation)
+VALUES ('08/09/2018'),
+WHERE name="Layal";
+"
+"
+DELETE FROM students WHERE Name=' Layal';
+"
+
+"
+
+"
