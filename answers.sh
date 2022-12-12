@@ -1,4 +1,4 @@
---Basic Queries
+## Basic Queries
 "
 1- SELECT name FROM students;
 
@@ -23,7 +23,7 @@ WHERE name = 'Basma' AND 'she solved one exercice';
 SET Points= '150'
 WHERE name = 'Alex' AND 'he is late today';
 "
---Creating table graduate 
+######Creating table graduate 
 
 "
 CREATE TABLE "graduates" (
@@ -52,6 +52,13 @@ WHERE name='layal';
 DELETE FROM students WHERE Name='Layal';
 "
 
-"
-
-"
+##########################################################################
+1-SELECT employees.name ,employees.Company ,companies.Date 
+FROM employees INNER JOIN companies on companies.Name = employees.Company;
+##########################################################################
+2-SELECT employees.name FROM employees INNER JOIN companies on employees.Company = companies.name 
+WHERE companies.Date< 2000;
+##########################################################################
+3-SELECT companies.Name FROM companies INNER JOIN employees on employees.Company = companies.Name 
+WHERE Role = 'graphic designer';
+##########################################################################
