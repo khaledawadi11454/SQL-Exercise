@@ -45,12 +45,11 @@ SELECT name, Age, Points FROM students
 WHERE name='layal';
 "
 "
-INSERT INTO graduates (Graduation)
-VALUES ('08/09/2018'),
-WHERE name="Layal";
+ UPDATE graduates SET Graduation = '08/09/2018'
+ WHERE name = 'layal';
 "
 "
-DELETE FROM students WHERE Name=' Layal';
+DELETE FROM students WHERE Name='Layal';
 "
 
 "
