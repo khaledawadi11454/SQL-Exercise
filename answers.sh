@@ -52,13 +52,30 @@ WHERE name='layal';
 DELETE FROM students WHERE Name='Layal';
 "
 
-##########################################################################
+########################Joins#############################################
 1-SELECT employees.name ,employees.Company ,companies.Date 
 FROM employees INNER JOIN companies on companies.Name = employees.Company;
-##########################################################################
+
 2-SELECT employees.name FROM employees INNER JOIN companies on employees.Company = companies.name 
 WHERE companies.Date< 2000;
-##########################################################################
+
 3-SELECT companies.Name FROM companies INNER JOIN employees on employees.Company = companies.Name 
 WHERE Role = 'graphic designer';
 ##########################################################################
+
+
+
+
+###############################Count & Filter###################################
+1-SELECT * FROM students
+WHERE Points = (SELECT max(points) FROM students);
+
+2-SELECT avg(points) FROM students;
+
+3-SELECT count(ID) FROM students 
+WHERE Points ='500';
+
+4-SELECT name FROM students
+WHERE name like '%S%';
+
+5-SELECT * FROM students ORDER by	Points  DESC ;
